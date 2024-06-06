@@ -1189,6 +1189,7 @@ dependencies = [
  "digest 0.10.7",
  "elliptic-curve",
  "rfc6979",
+ "serdect",
  "signature",
  "spki",
 ]
@@ -1220,6 +1221,7 @@ dependencies = [
  "pkcs8",
  "rand_core",
  "sec1",
+ "serdect",
  "subtle",
  "zeroize",
 ]
@@ -1616,10 +1618,15 @@ version = "0.1.0"
 dependencies = [
  "alloy-sol-types",
  "clap",
+ "k256",
+ "rand",
  "serde",
  "serde_json",
+ "sha2",
+ "sha3",
  "sp1-helper",
  "sp1-sdk",
+ "tiny-keccak",
  "tracing",
 ]
 
@@ -2415,6 +2422,7 @@ dependencies = [
  "ecdsa",
  "elliptic-curve",
  "once_cell",
+ "serdect",
  "sha2",
  "signature",
 ]
@@ -4045,6 +4053,7 @@ dependencies = [
  "der",
  "generic-array 0.14.7",
  "pkcs8",
+ "serdect",
  "subtle",
  "zeroize",
 ]
@@ -4201,6 +4210,16 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn 2.0.66",
+]
+
+[[package]]
+name = "serdect"
+version = "0.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a84f14a19e9a014bb9f4512488d9829a68e04ecabffb0f9904cd1ace94598177"
+dependencies = [
+ "base16ct",
+ "serde",
 ]
 
 [[package]]
