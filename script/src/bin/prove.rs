@@ -29,7 +29,7 @@ pub struct SigVerify {
     pub message: Vec<u8>,
     pub pubkey: PublicKey,
     pub signature: Signature,
-    pub recoveryId: u8,    
+    pub recovery_id: u8,    
 }
 
 #[derive(Clone, Debug, Serialize, Deserialize)]
@@ -132,9 +132,8 @@ fn ecdsa_withhash_bench() {
 
     // Deserialize the public values.
     let bytes = proof.public_values.as_slice();
-    print!(
-        "Public values: {:?} prover time {:?}",
-        bytes,
+    println!(
+        "prover time {:?}",
         prover_time.as_secs()
     );
 }
@@ -169,7 +168,7 @@ fn ecdsa_bench() {
          message: _message.to_vec(),
          pubkey: _pub_key,
          signature: _signature,
-         recoveryId: recid.to_byte(),
+         recovery_id: recid.to_byte(),
      };
      stdin.write(&sig_verify);
  
